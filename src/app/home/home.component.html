@@ -1,1 +1,27 @@
 <p>home works!</p>
+{{name}}
+<span [innerHtml]="name"></span>
+<div>{{student.name}}</div>
+<div>{{student.age}}</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="save('save clicked')">Save</button>
+<button (click)="togglePara()">Toggle</button>
+
+<p *ngIf="showDiv">
+   Using ng If Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed fugit autem facere suscipit, eveniet dolorum praesentium facilis debitis nulla similique accusamus amet optio vero voluptatum neque repellat in, quia qui.
+</p>
+
+<p [hidden]="showDiv">
+    Using hidden Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed fugit autem facere suscipit, eveniet dolorum praesentium facilis debitis nulla similique accusamus amet optio vero voluptatum neque repellat in, quia qui.
+</p>
